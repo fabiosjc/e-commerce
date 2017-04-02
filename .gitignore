@@ -6,7 +6,11 @@
 *.jar
 *.war
 
-# Folders
+# Folders/Files
 target
+node_modules
+dist
+app
+npm-debug.log
 
 
