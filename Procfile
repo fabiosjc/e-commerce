@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar e-commerce-web/target/dependency/webapp-runner.jar e-commerce-web/target/*.war
