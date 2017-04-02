@@ -1,6 +1,9 @@
 import angular from 'angular';
-
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/app.css';
+
 
 let app = () => {
   return {
