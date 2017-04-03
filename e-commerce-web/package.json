@@ -1,12 +1,16 @@
 {
   "name": "e-commerce",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.10.1"
+  },
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "webpack --config webpack.config.js"
+    "start": "webpack --config webpack.config.js",
+    "heroku-postbuild": "npm install && webpack -p --config webpack.config.js --progress"
   },
   "dependencies": {
     "angular": "^1.6.4",
