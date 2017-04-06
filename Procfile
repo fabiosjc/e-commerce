@@ -1,1 +1,1 @@
-web: cd e-commerce-web; mvn spring-boot:run
+web: java $JAVA_OPTS --port $PORT e-commerce-web/target/*.war
