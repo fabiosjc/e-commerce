@@ -1,4 +1,4 @@
-package br.com.ecommerce.config;
+package br.com.ecommerce.service;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,17 +16,17 @@ import org.springframework.web.servlet.view.JstlView;
  * Created by fabio on 01/04/17.
  * @since 1.0
  */
-@Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "br.com.ecommerce")
+//@Configuration
+//@EnableWebMvc
+//@ComponentScan
 public class SpringConfig extends WebMvcConfigurerAdapter {
 
-    @Bean
+//    @Bean
     public ViewResolver viewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/view/");
-        viewResolver.setSuffix(".jsp");
+        viewResolver.setSuffix(".html");
 
         return viewResolver;
     }

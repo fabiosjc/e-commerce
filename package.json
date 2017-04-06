@@ -6,11 +6,11 @@
   },
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "server": "webpack-dev-server  --config ./e-commerce-web/webpack.config.js --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "webpack --config webpack.config.js",
-    "heroku-postbuild": "npm install && webpack -p --config webpack.config.js --progress"
+    "start": "webpack --config ./e-commerce-web/webpack.config.js",
+    "heroku-postbuild": "npm install && webpack -p --config e-commerce-web/webpack.config.js --progress"
   },
   "dependencies": {
     "angular": "^1.6.4",
@@ -21,8 +21,8 @@
     "angular-mocks": "^1.5.0",
     "autoprefixer": "^6.0.3",
     "babel-core": "^6.2.1",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.1.18",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
     "extract-text-webpack-plugin": "2.0.0-beta.5",

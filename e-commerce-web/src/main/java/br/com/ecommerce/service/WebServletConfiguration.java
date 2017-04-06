@@ -1,4 +1,4 @@
-package br.com.ecommerce.config;
+package br.com.ecommerce.service;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;

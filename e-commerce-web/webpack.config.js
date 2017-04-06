@@ -34,7 +34,7 @@ module.exports = function makeWebpackConfig() {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? void 0 : {
-    app: './src/main/webapp/app/app.js'
+    app: './e-commerce-web/src/main/webapp/app/app.js'
   };
 
   /**
@@ -45,7 +45,7 @@ module.exports = function makeWebpackConfig() {
    */
   config.output = isTest ? {} : {
     // Absolute output directory
-    path: __dirname + '/dist',
+    path: __dirname + '/src/main/webapp/dist',
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
@@ -189,7 +189,7 @@ module.exports = function makeWebpackConfig() {
     // Render index.html
     config.plugins.push(
       new HtmlWebpackPlugin({
-        template: './src/main/webapp/index.html',
+        template: 'e-commerce-web/src/main/webapp/WEB-INF/jsp/index.jsp',
         inject: 'body'
       }),
 

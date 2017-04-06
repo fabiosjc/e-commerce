@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link href="css/lib/bootstrap.min.css" rel="stylesheet">
-  <base href="/">
+
+  <script src="/dist/app.bundle.js"></script>
 </head>
 
 <body>
