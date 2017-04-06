@@ -25,14 +25,14 @@ public class ProductRepositoryTest {
     private Product springBook, angularBook;
 
     @Autowired
-    ProdutoRepository repository;
+    ProductRepository repository;
 
     @Before
     public void setUp() throws Exception {
         this.repository.deleteAll();
 
-        this.springBook = repository.save(new Product("Spring Book", new BigDecimal(198.50)));
-        this.angularBook = repository.save(new Product("Angular Book", new BigDecimal(40.00)));
+        this.springBook = repository.save(new Product("Spring Book", 198.50));
+        this.angularBook = repository.save(new Product("Angular Book", 40.00));
     }
 
     @Test

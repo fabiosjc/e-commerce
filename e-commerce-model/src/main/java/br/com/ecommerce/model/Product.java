@@ -1,8 +1,5 @@
 package br.com.ecommerce.model;
 
-import org.springframework.beans.factory.annotation.Required;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,23 +7,28 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
+ * Produto utilizado pelo carrinho de compras
+ *
  * Created by fabio on 04/04/17.
  */
 @Entity
 public class Product implements Serializable {
 
-    private @Id @GeneratedValue Long id;
+    private Long id;
     private String name;
-    private BigDecimal unitaryPrice;
+    private String description;
+    private Double unitaryPrice;
 
     public Product() {
     }
 
-    public Product(String name, BigDecimal unitaryPrice) {
+    public Product(String name, Double unitaryPrice) {
         this.name = name;
         this.unitaryPrice = unitaryPrice;
     }
 
+    @Id
+    @GeneratedValue
     public Long getId() {
         return id;
     }
@@ -43,11 +45,21 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public BigDecimal getUnitaryPrice() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Double getUnitaryPrice() {
         return unitaryPrice;
     }
 
-    public void setUnitaryPrice(BigDecimal unitaryPrice) {
+    public void setUnitaryPrice(Double unitaryPrice) {
         this.unitaryPrice = unitaryPrice;
     }
+
+
 }

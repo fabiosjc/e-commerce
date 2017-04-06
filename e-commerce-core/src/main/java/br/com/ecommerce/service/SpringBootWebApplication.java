@@ -1,7 +1,7 @@
 package br.com.ecommerce.service;
 
 import br.com.ecommerce.model.Product;
-import br.com.ecommerce.repository.ProdutoRepository;
+import br.com.ecommerce.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,7 +31,7 @@ import java.math.BigDecimal;
 public class SpringBootWebApplication extends SpringBootServletInitializer {
 
     @Autowired
-    private ProdutoRepository repository;
+    private ProductRepository repository;
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SpringBootWebApplication.class, args);
@@ -45,9 +45,9 @@ public class SpringBootWebApplication extends SpringBootServletInitializer {
     @PostConstruct
     @Transactional
     public void onLoad(){
-        repository.save(new Product("Spring in Action",  new BigDecimal(198.50)));
-        repository.save(new Product("Pro AngularJs", new BigDecimal(183.80)));
-        repository.save(new Product("Clean Code: A Handbook of Agile Software Craftsmanship", new BigDecimal(78.49)));
-        repository.save(new Product("Design Patterns: Elements of Reusable Object-Oriented Software", new BigDecimal(227.26)));
+        repository.save(new Product("Spring in Action",198.50));
+        repository.save(new Product("Pro AngularJs", 183.80));
+        repository.save(new Product("Clean Code: A Handbook of Agile Software Craftsmanship", 78.49));
+        repository.save(new Product("Design Patterns: Elements of Reusable Object-Oriented Software", 227.26));
     }
 }

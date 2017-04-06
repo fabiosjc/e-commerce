@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by fabio on 04/04/17.
  */
 @Repository
-public interface ProdutoRepository extends CrudRepository<Product, Long> {
+public interface ProductRepository extends CrudRepository<Product, Long> {
 
     Product findByNameContaining(final String nome);
 }
